@@ -7,7 +7,7 @@
 # Access Swagger Ui link in following link ( http://localhost:$(Port Number)/swagger-ui.html )
 # Access Actuator in following link ( http://localhost:$(Port Number)/actuator )
 # Hit API and access the publishing point and consuming point for Basic Employee management application
-
+# Spring Boot Batch implemented in EmployeeController where the trigger is set in /loadBatch endpoint
 
 # Pre Requisties:
 # Java jdk (Minimum version 8)

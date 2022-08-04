@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -22,10 +23,12 @@ public class EmployeeService {
     EmployeeRepository employeeRepository;
     @Autowired
     RestTemplate restTemplate;
+
     @Bean
-    public RestTemplate restTemplate(RestTemplateBuilder builder){
+    public RestTemplate restTemplate(RestTemplateBuilder builder) {
         return builder.build();
     }
+
     @Autowired
     private Environment env;
 
@@ -50,10 +53,24 @@ public class EmployeeService {
 
     public ResponseEntity<Employee> addEmployee(Employee employee) {
         try {
-            return new ResponseEntity<>(employeeRepository.save(employee), HttpStatus.OK);
+            employee = validateEmployee(employee);
+            if (employee != null) {
+                return new ResponseEntity<>(employeeRepository.save(employee), HttpStatus.OK);
+            } else
+                return new ResponseEntity<>(null, HttpStatus.CONFLICT);
+
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
+    }
+
+    private Employee validateEmployee(Employee employee) {
+        if (employee != null) {
+            if (employee.getTime() == null) {
+                employee.setTime(new Date());
+            }
+        }
+        return employee;
     }
 
     public ResponseEntity<Employee> getEmployeeById(int id) {

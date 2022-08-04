@@ -37,8 +37,6 @@ public class Employee implements Serializable {
 	@Column(name = "age")
 	private int age;
 
-	@Column(name = "dob")
-	@JsonFormat(pattern="dd-MMM-yyyy")
-	private Date dob;
-
+	@Column(name = "time")
+	private Date time;
 }
