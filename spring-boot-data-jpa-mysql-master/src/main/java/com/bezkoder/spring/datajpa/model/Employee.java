@@ -37,4 +37,6 @@ public class Employee implements Serializable {
 	@Column(name = "age")
 	private int age;
 
+	@Column(name = "time")
+	private Date time;
 }
