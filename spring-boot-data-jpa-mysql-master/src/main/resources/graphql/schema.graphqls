@@ -1,0 +1,47 @@
+type Query{
+    authors:[Author]
+    authorById(id:ID!): Author
+    employees:[EmployeeTemplate]
+    employeeById(id:ID!): EmployeeTemplate
+}
+type EmployeeTemplate{
+    id: ID!
+    ename: String!
+    deptName:String!
+    deptId: String!
+    email:String!
+    salary: String!
+}
+type Mutation {
+    addBook(book:BookInput): Book
+    deleteBook(id:ID!) : Status
+    addEmployee(empInput:EmpInput): EmployeeTemplate
+    deleteEmployee(id:ID!) : Status
+}
+type Status{
+    statusCode : String!
+    message : String!
+}
+input BookInput{
+    title: String!
+    publisher: String!
+    authorId: ID!
+}
+input EmpInput{
+    id: ID!
+    ename: String!
+    deptName:String!
+    deptId: String!
+    email:String!
+    salary: String!
+}
+type Author{
+    id: ID!
+    name: String!
+    books:[Book]
+}
+type Book{
+    id: ID!
+    title: String!
+    publisher: String
+}
