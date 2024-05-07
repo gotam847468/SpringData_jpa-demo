@@ -1,7 +1,7 @@
-package com.bezkoder.spring.datajpa.batchWriter;
+package com.demo.spring.datajpa.batchWriter;
 
-import com.bezkoder.spring.datajpa.model.Employee;
-import com.bezkoder.spring.datajpa.repository.EmployeeRepository;
+import com.demo.spring.datajpa.model.Employee;
+import com.demo.spring.datajpa.repository.EmployeeRepository;
 import org.springframework.batch.item.ItemWriter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

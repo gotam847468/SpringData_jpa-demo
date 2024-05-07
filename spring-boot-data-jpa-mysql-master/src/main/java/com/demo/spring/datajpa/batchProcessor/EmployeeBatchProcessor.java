@@ -1,6 +1,6 @@
-package com.bezkoder.spring.datajpa.batchProcessor;
+package com.demo.spring.datajpa.batchProcessor;
 
-import com.bezkoder.spring.datajpa.model.Employee;
+import com.demo.spring.datajpa.model.Employee;
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.stereotype.Component;
 

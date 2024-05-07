@@ -1,8 +1,8 @@
-package com.bezkoder.spring.datajpa.services;
+package com.demo.spring.datajpa.services;
 
-import com.bezkoder.spring.datajpa.model.Employee;
-import com.bezkoder.spring.datajpa.model.EmployeeList;
-import com.bezkoder.spring.datajpa.repository.EmployeeRepository;
+import com.demo.spring.datajpa.model.Employee;
+import com.demo.spring.datajpa.model.EmployeeList;
+import com.demo.spring.datajpa.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;

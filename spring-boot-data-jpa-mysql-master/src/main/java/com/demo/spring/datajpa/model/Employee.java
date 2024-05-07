@@ -1,4 +1,4 @@
-package com.bezkoder.spring.datajpa.model;
+package com.demo.spring.datajpa.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;

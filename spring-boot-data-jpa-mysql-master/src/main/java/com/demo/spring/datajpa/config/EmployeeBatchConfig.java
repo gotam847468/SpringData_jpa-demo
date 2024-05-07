@@ -1,6 +1,6 @@
-package com.bezkoder.spring.datajpa.config;
+package com.demo.spring.datajpa.config;
 
-import com.bezkoder.spring.datajpa.model.Employee;
+import com.demo.spring.datajpa.model.Employee;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;

@@ -1,8 +1,8 @@
-package com.bezkoder.spring.datajpa.controller;
+package com.demo.spring.datajpa.controller;
 
-import com.bezkoder.spring.datajpa.model.Employee;
-import com.bezkoder.spring.datajpa.model.EmployeeList;
-import com.bezkoder.spring.datajpa.services.EmployeeService;
+import com.demo.spring.datajpa.model.Employee;
+import com.demo.spring.datajpa.model.EmployeeList;
+import com.demo.spring.datajpa.services.EmployeeService;
 import org.springframework.batch.core.*;
 import org.springframework.batch.core.launch.JobLauncher;
 import org.springframework.batch.core.repository.JobExecutionAlreadyRunningException;
